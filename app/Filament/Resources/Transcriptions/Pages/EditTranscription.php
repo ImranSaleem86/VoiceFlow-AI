@@ -2,13 +2,13 @@
 
 namespace App\Filament\Resources\Transcriptions\Pages;
 
-use App\Filament\Resources\Transcriptions\TranscriptionsResource;
+use App\Filament\Resources\Transcriptions\TranscriptionResource;
 use Filament\Actions\DeleteAction;
 use Filament\Resources\Pages\EditRecord;
 
-class EditTranscriptions extends EditRecord
+class EditTranscription extends EditRecord
 {
-    protected static string $resource = TranscriptionsResource::class;
+    protected static string $resource = TranscriptionResource::class;
 
     protected function getHeaderActions(): array
     {

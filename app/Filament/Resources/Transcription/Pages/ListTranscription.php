@@ -1,12 +1,12 @@
 <?php
 
-namespace App\Filament\Resources\Transcriptions\Pages;
+namespace App\Filament\Resources\Transcription\Pages;
 
-use App\Filament\Resources\Transcriptions\TranscriptionResource;
+use App\Filament\Resources\Transcription\TranscriptionResource;
 use Filament\Actions\CreateAction;
 use Filament\Resources\Pages\ListRecords;
 
-class ListTranscriptions extends ListRecords
+class ListTranscription extends ListRecords
 {
     protected static string $resource = TranscriptionResource::class;
 
