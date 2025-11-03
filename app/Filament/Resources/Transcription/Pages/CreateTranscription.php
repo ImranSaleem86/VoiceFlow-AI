@@ -4,6 +4,7 @@ namespace App\Filament\Resources\Transcription\Pages;
 
 use App\Filament\Resources\Transcription\TranscriptionResource;
 use Filament\Resources\Pages\CreateRecord;
+use App\Jobs\processtranscriptions;
 
 class CreateTranscription extends CreateRecord
 {
@@ -31,6 +32,8 @@ class CreateTranscription extends CreateRecord
     {
         // You can add any post-creation logic here, like processing the audio file
         // For example, dispatch a job to process the audio in the background
-        // ProcessAudio::dispatch($this->record);
+        processtranscriptions::dispatch($this->record);
+
+        // dd($this->record);
     }
 }
