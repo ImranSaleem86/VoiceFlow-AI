@@ -39,6 +39,9 @@ class TranscriptionCompletion extends ChartWidget
             case 'last_month':
                 $query->whereBetween('created_at', [Carbon::now()->subMonth()->startOfMonth(), Carbon::now()->subMonth()->endOfMonth()]);
                 break;
+            case 'all_time':
+                $query->where('created_at', '>=', Carbon::now()->subYear());
+                break;    
             default:
                 break;    
         }
@@ -81,6 +84,7 @@ class TranscriptionCompletion extends ChartWidget
             'this_week' => 'This Week',
             'this_month' => 'This Month',
             'last_month' => 'Last Month',
+            'all_time' => 'All Time',
         ];
     }   
 
